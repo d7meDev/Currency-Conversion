@@ -44,14 +44,14 @@
                         <% } %>
                         
                     </select>
-                    <input type="text" name="fromValue" placeholder="From:" value="<%= Number(fromValue).toFixed(4) %>">
+                    <input type="text" name="fromValue" placeholder="From:" value="<%= Number(fromValue).toFixed(3) %>">
                 </div>
 
                 <button type="submit" style="background-color: transparent; border: none; cursor: pointer;"><img src="images/exchange-icon.svg" alt="exchange icon"></button>
 
                 <div class="to-currency currency-group">
                     
-                    <input name="toValue" type="text" placeholder="To:" value="<%= Number(toValue).toFixed(4) %>">
+                    <input name="toValue" type="text" placeholder="To:" value="<%= Number(toValue).toFixed(3) %>">
                     <select name="toCurrency">
                         <% for(let i = 0; i< codes.length; i++ ){ %>
                                
