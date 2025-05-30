@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Conversion</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <section class="title-section">
+        
+        <header>
+
+             <a href="/"><h1 class="text-title">Currency Conversion</h1></a>  
+
+        </header>
+        
+
+    </section>
+
+    <section class="main-section">
+              
+        <% if(locals.error){ %>
+
+            <h2 style="color: #DBEDF3;"> <%= error %> </h2>
+        <% } else{ %>
+
+         <main>
+            <form action="/" method="POST" class="form-conversion">
+
+                
+                <div class="from-currency currency-group">
+
+                    <select name="fromCurrency">
+                        
+                        <% for(let i = 0; i< codes.length; i++ ){ %>
+                               
+                            <% if(codes[i][0] === fromCurrency) { %>
+                               <option value="<%= codes[i][0] %>" selected><%= codes[i][0] %></option>
+                         <% } else{ %>
+                             <option value="<%= codes[i][0] %>"><%= codes[i][0] %></option>
+                        <% } %>
+                        <% } %>
+                        
+                    </select>
+                    <input type="text" name="fromValue" placeholder="From:" value="<%= Number(fromValue).toFixed(4) %>">
+                </div>
+
+                <button type="submit" style="background-color: transparent; border: none; cursor: pointer;"><img src="images/exchange-icon.svg" alt="exchange icon"></button>
+
+                <div class="to-currency currency-group">
+                    
+                    <input name="toValue" type="text" placeholder="To:" value="<%= Number(toValue).toFixed(4) %>">
+                    <select name="toCurrency">
+                        <% for(let i = 0; i< codes.length; i++ ){ %>
+                               
+                            <% if(codes[i][0] === toCurrency) { %>
+                               <option value="<%= codes[i][0] %>" selected><%= codes[i][0] %></option>
+                         <% } else{ %>
+                             <option value="<%= codes[i][0] %>"><%= codes[i][0] %></option>
+                        <% } %>
+                        <% } %>
+                    </select>
+                    
+                </div>
+                
+
+            </form>
+         </main>
+
+         <% } %>
+
+    </section>
+
+    <section class="footer-section">
+              
+         <footer>
+            Made By d7meDev
+         </footer>
+
+    </section>
+    
+</body>
+</html>

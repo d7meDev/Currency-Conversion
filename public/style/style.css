@@ -1,0 +1,204 @@
+
+:root{
+    --elements-background-color: #404B69;
+    --body-background-color: #283149;
+    --text-color: #DBEDF3;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--body-background-color);
+
+}
+
+.title-section{
+
+    padding: 10px;
+    background-color: var(--elements-background-color);
+    text-align: center;
+}
+
+.title-section .text-title{
+    
+    font-size: 3rem;
+    color: var(--text-color);
+    
+
+}
+
+.main-section{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+    
+}
+
+
+
+.main-section main .form-conversion{
+
+    
+    width: 100vw;
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    
+   
+}
+
+.main-section main .form-conversion .currency-group {
+         
+     display: flex; 
+     flex: 1;
+    
+
+    
+     
+     
+
+}
+
+.main-section main .form-conversion .to-currency{
+    
+    justify-content: flex-end;
+
+}
+
+.main-section main .form-conversion .currency-group input{
+
+    flex:1;
+    padding: 5px;
+    
+
+    font-size: 1.2rem;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+
+
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.main-section main .form-conversion .currency-group input::placeholder{
+
+    
+    text-align: left;
+}
+
+
+.main-section main .form-conversion .to-currency input{
+    
+    border-top-right-radius: 0px ;
+    border-bottom-right-radius: 0px ;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+    
+
+}
+
+.main-section main .form-conversion .currency-group select{
+   
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+
+    border: none;
+    outline: none;
+
+    border-right: 2px solid rgba(0, 0, 0, 0.3) ;
+    padding: 2px;
+    text-align: center;
+}
+
+.main-section main .form-conversion .to-currency select{
+   
+    border-top-left-radius: 0px ;
+    border-bottom-left-radius: 0px;
+     border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+    
+    border: none;
+    border-left: 2px solid rgba(0, 0, 0, 0.3) ;
+}
+
+
+.footer-section{
+
+    text-align: center;
+    padding: 20px;
+   
+    color: var(--text-color);
+    
+}
+
+
+
+@media (max-width:767px) {
+   
+   .title-section .text-title{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .main-section main .form-conversion{
+
+        
+        flex-direction: column;
+        row-gap: 5px;
+      
+   
+    }
+
+    .main-section main .form-conversion .currency-group {
+         
+        
+        width: 100%;
+     
+
+    }
+
+    .main-section main .form-conversion .to-currency{
+    
+       flex-direction: row-reverse;
+
+    }
+
+    .main-section main .form-conversion .to-currency input{
+       
+       border-top-right-radius: 15px ;
+       border-bottom-right-radius: 15px ;
+       border-top-left-radius: 0px;
+       border-bottom-left-radius: 0px ;
+
+    }
+
+    .main-section main .form-conversion .to-currency select{
+       
+       border: none;
+       border-right: 2px solid rgba(0, 0, 0, 0.3) ;
+       border-top-right-radius: 0px;
+       border-bottom-right-radius: 0px;
+       border-top-left-radius: 15px;
+       border-bottom-left-radius: 15px;
+
+    }
+
+}
